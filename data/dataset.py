@@ -24,14 +24,14 @@ def transformations(augmentation=True, rotation=3.0):
     return A.Compose(transforms_list)
 
 
-'''
-def transformations(augmentation=False, rotation=3.0):
-    transforms_list = [
-        transforms.ToTensor(),
-        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
-    ]
-    if augmentation:
-        transforms_list = [
-                              transforms.RandomRotation((-rotation, rotation), fill=(1,))
-                          ] + transforms_list
-    return transforms.Compose(transforms_list)'''
+
+###def transformations(augmentation=False, rotation=3.0):
+    ##transforms_list = [
+        ##transforms.ToTensor(),
+        ##transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+    #]
+    #if augmentation:
+       # transforms_list = [
+                             # transforms.RandomRotation((-rotation, rotation), fill=(1,))
+                          #] + transforms_list
+    #return transforms.Compose(transforms_list)'''
