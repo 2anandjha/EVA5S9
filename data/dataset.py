@@ -1,6 +1,7 @@
 from torchvision import datasets, transforms
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
+!pip install -U git+https://github.com/albu/albumentations > /dev/null
 
 
 
