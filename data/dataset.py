@@ -11,7 +11,8 @@ def cifar10_dataset(location='../data', train=True, download=True, transform=Non
 
 ''' using pytorch albumenations'''
 
-train_transform = A.Compose(
+def train_tarnsform():
+    A.Compose(
     [
         A.SmallestMaxSize(max_size=160),
         A.ShiftScaleRotate(shift_limit=0.05, scale_limit=0.05, rotate_limit=15, p=0.5),
@@ -19,7 +20,7 @@ train_transform = A.Compose(
         A.RGBShift(r_shift_limit=15, g_shift_limit=15, b_shift_limit=15, p=0.5),
         A.RandomBrightnessContrast(p=0.5),
         A.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5)),
-        ToTensorV2(),
+        ToTensorV2()
     ]
 )
 
