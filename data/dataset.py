@@ -23,6 +23,7 @@ def cifar10_dataset(location='../data', train=True, download=True, transform=Non
         ToTensorV2()
     ]
 )'''''
+
 def transformations(augmentation=True, rotation=3.0):
          transforms_list = [
         A.SmallestMaxSize(max_size=160),
@@ -38,7 +39,6 @@ def transformations(augmentation=True, rotation=3.0):
     
         
     return A.Compose(transforms_list)
- 
 
 '''
 def transformations(augmentation=False, rotation=3.0):
@@ -50,5 +50,4 @@ def transformations(augmentation=False, rotation=3.0):
         transforms_list = [
                               transforms.RandomRotation((-rotation, rotation), fill=(1,))
                           ] + transforms_list
-
     return transforms.Compose(transforms_list)'''
